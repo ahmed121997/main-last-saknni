@@ -1,0 +1,73 @@
+.activation{
+    margin: 20px auto;
+    text-align: center
+}
+.activation button{
+    margin: 5px auto;
+}
+.activation button a{
+    color:#FFF;
+    text-decoration: none;
+    font-size: 16px;
+}
+.activation button a div:first-child{
+    line-height: 2em;
+}
+.activation .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.activation .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #fff;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.activation .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.activation .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.activation .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.activation p {
+    font-size: 16px;
+}
+.activation .lds-ring{
+    display: none;
+}
+.status-payment {
+    width:50%;
+    margin:5px auto;
+}
+.icons-payment{
+    margin-top: 20px ;
+    margin-bottom: 20px;
+}
+.icons-payment img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+}
+.wpwl-form{
+    direction: ltr;
+}

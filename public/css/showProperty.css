@@ -1,0 +1,107 @@
+/********
+* style for : view/property/show.blade.php
+*
+*/
+h2 {
+text-transform: capitalize !important;
+}
+h3 {
+
+    text-transform: capitalize;
+}
+h3 {
+
+    text-transform: capitalize;
+}
+/*style for carousel */
+.carousel-indicators li {
+    width: 17px;
+    height: 17px;
+    background-color: #009688;
+    opacity: 0.3;
+    border-radius: 50%;
+}
+/**********************************/
+.show-property .alert-info{
+    background: #FFF;
+}
+.show-property .alert-info >div{
+    font-weight: normal;
+
+}
+.show-property .alert-info >div div {
+    margin-bottom: .1em;
+    padding: 5px;
+    color: #607d8b;
+    font-weight: bold;
+}
+.show-property .alert-info div span{
+    color: #03a9f4;
+    margin-right: 10px;
+    font-weight: normal;
+}
+button > a{
+    color:#FFF;
+}
+button > a:hover{
+    color:#FFF;
+    text-decoration: none;
+}
+.show-property .alert{
+    padding:0.5em 1.5em;
+ }
+.show-property .alert-info .row{
+    background: #FFF;
+    padding: 10px;
+}
+/**************Style Comment part **********************/
+.replay-form {
+    display: none;
+
+}
+.display-comment > .display-comment{
+    display:none;
+}
+.display-comment{
+    background: #FFF;
+    margin-bottom: 1em;
+    padding: 0 15px;
+ }
+ .display-comment p {
+    margin-bottom: 0;
+    margin-left:1em;
+    color:#607d8b;
+}
+.display-comment .replay{
+    margin-bottom: .25em;
+    margin-left:1em
+}
+.display-comment .form-group{
+    margin-bottom: .25em;
+    margin-left:1em
+
+}
+.error{
+    display: none;
+}
+.error-replay{
+    display: none;
+}
+.properties-icon i {
+    margin:4px;
+    display: inline;
+    color: #984409;
+}
+.properties-icon span {
+    color:grey;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 10px;
+}
+.contact .number-phone, .contact .email{
+    display: none;
+}
+.contact .btn i {
+    padding-left: 5px;
+    padding-right: 10px;
+}

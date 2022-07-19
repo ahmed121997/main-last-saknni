@@ -1,0 +1,71 @@
+.welcome-message{
+    background: rgba(65,60,70,.9);
+    padding: 10px;
+    border: 1px solid #222222;
+    margin-bottom: 2em;
+    font-family: cursive;
+    color: #ffffff;
+    font-weight: bold;
+}
+.welcome .welcome-message span{
+    color: #069eb1;
+    font-weight: bold;
+}
+.welcome-message .container .row [class*="col-"]{
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-top: 0.25em;
+}
+.welcome h3{
+    font-family: fantasy;
+}
+
+.card-body p{
+
+    text-align: justify;
+
+}
+.welcome .btn-secondary a{
+    color:#FFF;
+    transition: all .3s ease-in;
+}
+.welcome .btn-secondary a:hover{
+    color: #d0b8b2;
+    text-decoration: none;
+    padding: 2px;
+}
+.card-body{
+    padding: 0;
+    padding-left: 1.25em;
+    padding-right: 1.25em;
+}
+.card-body p >span {
+    color:#1d68a7;
+    font-size: 14px;
+    font-weight: bold;
+}
+.card-body h4{
+    height: 1em;
+    text-overflow: ellipsis ;
+    overflow: hidden;
+    white-space:nowrap ;
+}
+.properties-icon{
+    margin: 0;
+    max-height: 1.5em;
+
+}
+.properties-icon i {
+    margin:4px;
+    color: #984409;
+
+}
+.properties-icon .fas{
+    display: inline;
+}
+.properties-icon span {
+    margin-right: 10px;
+    color:grey;
+    font-size: 14px;
+    font-weight: normal;
+}

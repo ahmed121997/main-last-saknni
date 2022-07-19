@@ -1,0 +1,41 @@
+.card-body{
+    padding-top: .5em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.card-body p{
+
+    text-align: justify;
+}
+.card-body p >span {
+    color:#1d68a7;
+    font-size: 14px;
+    font-weight: bold;
+}
+.card-body h5{
+    height: 1em;
+    text-overflow: ellipsis ;
+    overflow: hidden;
+    white-space:nowrap ;
+}
+.properties-icon{
+    margin: 0;
+    max-height: 1.5em;
+
+}
+.properties-icon i {
+    margin:2px;
+    color: #984409;
+
+}
+.properties-icon .fas{
+    display: inline;
+}
+.properties-icon span {
+    color:grey;
+    font-size: small;
+    font-weight: normal;
+}
+h3{
+    font-family: fantasy;
+}

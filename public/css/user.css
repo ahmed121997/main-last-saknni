@@ -1,0 +1,84 @@
+/*
+** Style for view/user/*
+*/
+
+
+button >a{
+    color:#FFF;
+    text-decoration: none;
+}
+a:hover{
+    color: #FF1;
+    text-decoration: none;
+}
+a.link-youtube:hover{
+    color: #ff5500;
+    text-decoration: none;
+}
+.card-header h5 button{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.card-body > div {
+    padding: 5px;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    color: #312e2e;
+    font-weight: bold;
+
+}
+.card-body > div span {
+    color: #145d92;
+    font-size: 1.25em;
+    font-weight: bold;
+}
+.card-body > button {
+    transition: all .3s ease;
+}
+.card-body button{
+    transition: all .3s ease;
+}
+.card-body  button:hover{
+    transform: scale(1.3);
+}
+.card-body >div button:hover{
+    transform: scale(1.3);
+}
+table tr td{
+    font-size: 1em;
+    font-weight: normal;
+}
+.alert-info {
+    background: #f8fafc;
+}
+.show-property .alert-info >div{
+    font-weight: 500;
+    font-size: 1.3em;
+}
+.show-property .alert-info >div >div{
+    margin-bottom: 0.5em;
+    background-color:#FFF;
+    border: 1px solid #e6e0e0;
+    padding-top:5px ;
+    padding-bottom: 5px;
+}
+.show-property .alert-info div span{
+    color: #96001c;
+    font-weight: normal;
+    font-size: 0.9em;
+}
+
+.show-property .alert-info >div.images{
+}
+.show-property >div > div.property {
+    display: none;
+}
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 300px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
