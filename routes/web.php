@@ -67,7 +67,7 @@ Route::group(
         Route::any('/update/{id}','UserController@update')->name('user.update')->middleware('cmr');
     });
 /*
-    last eit eidt kovbko koviko
+    last eit eidt kovbko koviko opjiojiohnoiojji
 */
 
 });
