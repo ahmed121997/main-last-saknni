@@ -51,20 +51,34 @@ table tr td{
 .alert-info {
     background: #f8fafc;
 }
-.show-property .alert-info >div{
+.show-property .alert-info > div{
     font-weight: 500;
     font-size: 1.3em;
 }
 .show-property .alert-info >div >div{
     margin-bottom: 0.5em;
-    background-color:#FFF;
+
     border: 1px solid #e6e0e0;
+    color:#FFF;
     padding-top:5px ;
     padding-bottom: 5px;
+    text-align: center;
+    border-radius: 20px;
+}
+.show-property .alert-info >div >div:nth-child(even){
+    background-color:#076c8b;
+}
+.show-property .alert-info >div >div:nth-child(odd){
+    background-color:#387385;
+}
+.show-property .alert-info >div >div:last-child{
+    background-color:#f8fafc;
+    color:#000;
+    font-weight: blod;
 }
 .show-property .alert-info div span{
-    color: #96001c;
-    font-weight: normal;
+    color: #000;
+    font-weight: bold;
     font-size: 0.9em;
 }
 
