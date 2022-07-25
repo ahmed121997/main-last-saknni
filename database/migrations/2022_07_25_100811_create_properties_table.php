@@ -33,6 +33,8 @@ class CreatePropertiesTable extends Migration
             $table->tinyInteger('special');
             $table->string('link_youtube');
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
 
 
