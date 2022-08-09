@@ -336,7 +336,7 @@ footer p a:hover {
 /*  End Footer */
 
 .nav-item.active{
-    
+
     background: #e91e6330;
     border-radius: 15px;
     color: #FFF !important;
@@ -349,4 +349,8 @@ footer p a:hover {
 }
 .icon-love:hover{
     color:#0d6aad;
+}
+
+.navbar-brand{
+    direction: initial;
 }

@@ -22,7 +22,7 @@
 
     @media (min-width: 768px) {
     .gradient-form {
-    height: 100vh !important;
+
     }
     }
     @media (min-width: 769px) {
@@ -34,23 +34,26 @@
     a{
         text-decoration: none;
     }
+    .Footer {
+        margin-top: 0;
+    }
     </style>
 @endsection
 
 @section('content')
 <section class="gradient-form">
-    <div class="container py-4">
-        <div class="row d-flex justify-content-center align-items-center h-100">
+    <div class="container py-2">
+        <div class="row d-flex justify-content-center align-items-center">
             <div class="col-xl-10">
                 <div class="card rounded-3 text-black" style="border: 1px solid #e8642b;">
                     <div class="row g-0">
                         <div class="col-lg-6" style="direction: ltr">
-                            <div class="card-body p-md-5 mx-md-4">
+                            <div class="card-body p-md-3 mx-md-4">
 
                                 <div class="text-center">
                                     <img src="{{asset('public/logo.jpg')}}"
                                         style="width: 185px;" alt="logo">
-                                    <h4 class="mt-1 mb-5 pb-1">We are <span style="color:#069eb1">The Saknni</span> Company</h4>
+                                    <h4 class="mt-1 mb-5 pb-2">We are <span style="color:#069eb1">The Saknni</span> Company</h4>
                                 </div>
 
                                 <form method="POST" action="{{ route('login') }}">
