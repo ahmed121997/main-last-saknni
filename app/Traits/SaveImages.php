@@ -17,4 +17,13 @@ trait SaveImages{
             return $data;
         }
     }
+
+    function saveIamge($request, $nameFile){
+
+        if($request->hasfile($nameFile)){
+            $image = $request->file($nameFile);
+            $name = time().$nameFile->getClientOriginalExtension();
+            $image->move(public_path().'/images/', $name);
+        }
+    }
 }

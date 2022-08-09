@@ -11,7 +11,7 @@
                 <p><a href="{{ route('add.property') }}">{{ __('navbar.add_property') }}</a></p>
 
             </div>
-            <hr/>
+
             <div  class="col-md-6 col-lg-4">
                 <h4>{{__('footer.follow_us')}}</h4>
                 <div class="icons-social">

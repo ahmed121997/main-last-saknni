@@ -1,74 +1,135 @@
+
 @extends('layouts.app')
 
+@section('links')
+
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
+    rel="stylesheet"/>
+
+<style>
+
+    .gradient-custom-2 {
+    /* fallback for old browsers */
+    background: #fccb90;
+
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    }
+
+    @media (min-width: 768px) {
+    .gradient-form {
+    height: 100vh !important;
+    }
+    }
+    @media (min-width: 769px) {
+    .gradient-custom-2 {
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+    }
+    }
+    a{
+        text-decoration: none;
+    }
+    </style>
+@endsection
+
 @section('content')
-<div class="container mb-lg-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header h5">{{ __('logins.login') }}</div>
+<section class="gradient-form">
+    <div class="container py-4">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-xl-10">
+                <div class="card rounded-3 text-black" style="border: 1px solid #e8642b;">
+                    <div class="row g-0">
+                        <div class="col-lg-6" style="direction: ltr">
+                            <div class="card-body p-md-5 mx-md-4">
 
-                <div class="card-body" style="font-size: 14px;font-weight: bold;">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
-
-                        <div class="form-group row" >
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('logins.email') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('logins.password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('logins.remember_me') }}
-                                    </label>
+                                <div class="text-center">
+                                    <img src="{{asset('public/logo.jpg')}}"
+                                        style="width: 185px;" alt="logo">
+                                    <h4 class="mt-1 mb-5 pb-1">We are <span style="color:#069eb1">The Saknni</span> Company</h4>
                                 </div>
+
+                                <form method="POST" action="{{ route('login') }}">
+                                    @csrf
+                                    <p @if (app()->getLocale() === 'ar') style="text-align:right" @endif>{{__('logins.Please_login_to_your_account')}}</p>
+
+                                    {{-- email inpput --}}
+                                    <div class="form-outline mb-4">
+                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus />
+                                        <label class="form-label" for="email">{{ __('logins.email') }}</label>
+
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+                                    {{-- password input --}}
+                                    <div class="form-outline mb-4">
+                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" />
+                                        <label class="form-label" for="password">{{ __('logins.password') }}</label>
+
+                                        @error('password')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+
+                                    {{-- remember me --}}
+                                    <div class="form-group row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                                <label class="form-check-label" for="remember">
+                                                    {{ __('logins.remember_me') }}
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center pt-1 mb-4 pb-1">
+
+                                        @if (Route::has('password.request'))
+                                        <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                                            type="submit"> {{ __('logins.login') }}</button>
+                                        <a class="text-muted" href="{{ route('password.request') }}">
+                                            {{ __('logins.forget_your_password') }}
+                                        </a>
+                                        @endif
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center pb-4">
+                                        <p class="mb-0 me-2">{{__('logins.Dont_have_an_account?')}}</p>
+
+                                        <a class="btn btn-outline-danger" href="{{ route('register') }}"> {{ __('logins.create_new') }}</a>
+                                    </div>
+
+                                </form>
+
                             </div>
                         </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('logins.forget_your_password') }}
-                                    </a>
-                                @endif
-                                    <button type="submit" class="btn btn-primary">
-                                        {{ __('logins.login') }}
-                                    </button>
+                        <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
+                            <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                                <h4 class="mb-4">We are more than just a company</h4>
+                                <p class=" mb-0">{{__('footer.saknni_message')}}</p>
                             </div>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+@endsection
+
+@section('script')
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.js"></script>
 @endsection
