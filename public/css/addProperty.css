@@ -84,7 +84,7 @@ body {
 /*buttons*/
 #msform .action-button {
     width: 100px;
-    background: #069eb1;
+    background: #217b8e;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -183,11 +183,11 @@ body {
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before, #progressbar li.active:after {
-    background: #069eb1;
+    background: #217b8e;
     color: white;
 }
 #progressbar li.active{
-    color: #069eb1;
+    color: #217b8e;
     font-size:12px;
     font-weight: bold;
 }
@@ -199,7 +199,7 @@ body {
 }
 .dme_link a {
     font-weight: bold;
-    background: #069eb1;
+    background: #217b8e;
 
     border: 0 none;
     border-radius: 25px;

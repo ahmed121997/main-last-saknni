@@ -282,7 +282,7 @@ a{
 /* Style for Footer*/
 footer{
     text-align: justify;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(43,43,79,1) 33%, rgba(33,123,142,1) 48%);
+
     color:#FFF;
     padding: 2em 2em;
     margin-bottom: auto;
@@ -353,4 +353,20 @@ footer p a:hover {
 
 .navbar-brand{
     direction: initial;
+}
+
+.color-saknni{
+    color:#217b8e !important;
+}
+.border-saknni {
+    border: 1px solid #217b8e !important;
+}
+.background-saknni {
+    background: linear-gradient(90deg, rgb(0 88 106) 0%, rgb(55 91 124) 33%, rgb(8 108 129) 48%) !important;
+    color:#FFF !important;
+}
+
+.background-saknni:hover{
+    background: linear-gradient(90deg, rgb(0 88 106) 0%, rgb(55 91 124) 33%, rgb(8 108 129) 48%) !important;
+    color:#FFF !important;
 }

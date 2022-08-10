@@ -4,8 +4,8 @@
 @endsection
 @section('content')
     <div class="container-fluid search">
-        <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3 control">
+        <div class="row h-100">
+            <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 control background-saknni h-100 pt-5 pb-5">
                 <h3>{{__('property.search_control')}}</h3>
                 <hr/>
                 <form id="search-form">
@@ -62,7 +62,7 @@
                     <div class="text-center"><button id="search" class="btn btn-secondary mb-2">{{__('property.search')}}</button></div>
                 </form>
             </div>
-            <div class="col-sm-6 col-md-8 col-lg-9  results">
+            <div class="col-sm-6 col-md-8 col-lg-9 col-xl-10 results">
                 <h3 class="h3 mb-0 text-gray-800">{{__('property.results')}}</h3>
                 <hr/>
                 <div class="row">

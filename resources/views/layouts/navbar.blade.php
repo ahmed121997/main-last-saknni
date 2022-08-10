@@ -35,11 +35,11 @@
 
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item">
+                    <li class="nav-item {{ Route::currentRouteNamed('login') ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('login') }}">{{ __('navbar.login') }}</a>
                     </li>
                     @if (Route::has('register'))
-                        <li class="nav-item">
+                        <li class="nav-item {{ Route::currentRouteNamed('register') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('register') }}">{{ __('navbar.register') }}</a>
                         </li>
                     @endif

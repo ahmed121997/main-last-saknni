@@ -14,10 +14,10 @@
     background: #fccb90;
 
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: linear-gradient(90deg, rgb(0 88 106) 0%, rgb(55 91 124) 33%, rgb(8 108 129) 48%);
 
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: linear-gradient(90deg, rgb(0 88 106) 0%, rgb(55 91 124) 33%, rgb(8 108 129) 48%);
     }
 
     @media (min-width: 768px) {
@@ -45,7 +45,7 @@
     <div class="container py-2">
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-xl-10">
-                <div class="card rounded-3 text-black" style="border: 1px solid #e8642b;">
+                <div class="card rounded-3 text-black border-saknni">
                     <div class="row g-0">
                         <div class="col-lg-6" style="direction: ltr">
                             <div class="card-body p-md-3 mx-md-4">
@@ -53,7 +53,7 @@
                                 <div class="text-center">
                                     <img src="{{asset('public/logo.jpg')}}"
                                         style="width: 185px;" alt="logo">
-                                    <h4 class="mt-1 mb-5 pb-2">We are <span style="color:#069eb1">The Saknni</span> Company</h4>
+                                    <h4 class="mt-1 mb-5 pb-2">We are <span class="color-saknni">The Saknni</span> Company</h4>
                                 </div>
 
                                 <form method="POST" action="{{ route('login') }}">
@@ -111,7 +111,7 @@
                                     <div class="d-flex align-items-center justify-content-center pb-4">
                                         <p class="mb-0 me-2">{{__('logins.Dont_have_an_account?')}}</p>
 
-                                        <a class="btn btn-outline-danger" href="{{ route('register') }}"> {{ __('logins.create_new') }}</a>
+                                        <a class="btn btn-outline-danger border-saknni color-saknni" href="{{ route('register') }}"> {{ __('logins.create_new') }}</a>
                                     </div>
 
                                 </form>

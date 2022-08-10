@@ -28,6 +28,15 @@
 .search [class*="col-"] .form-group {
     margin-bottom: .5em;
 }
+.search #search {
+    color: #086c81;
+    background-color: #ffffff;
+    border-color: #1d68a7;
+}
+.search #search:hover{
+    border-color: #1d68a7;
+    color:#FFF;
+}
 .card-body p{
 
     text-align: justify;

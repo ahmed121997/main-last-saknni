@@ -1,6 +1,6 @@
 <?php
 return [
-    'login'=> 'Login',
+    'login'=> 'Log in',
     'email' => 'E-Mail',
     'password'=> 'Password',
     'remember_me'=> 'Remember Me',
