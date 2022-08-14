@@ -133,7 +133,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <div class="font-weight-bold text-primary text-uppercase mb-1">Files</div>
+                                <div class="font-weight-bold text-success text-uppercase mb-1">Files</div>
                                 <div class="h5 mb-0 font-weight-bold text-gray-800">{{$count_iamges}}</div>
                             </div>
                             <div class="col-auto">

@@ -10,7 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <link rel="icon" href="{{asset('public/logo.jpg')}}"/>
-    
+
     <title>{{ config('app.name', 'Laravel')  }}  @if(isset($title))| {{$title}} @endif</title>
 
     <!-- Custom fonts for this template -->
@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template -->
     <link href="{{asset('public/css/admin/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/css/admin/all.css')}}" rel="stylesheet">
 
 
     @yield('links')

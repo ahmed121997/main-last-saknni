@@ -16,3 +16,8 @@
 .dataTables_wrapper tr:first-child{
     background: antiquewhite;
 }
+
+
+.text-gray-300{
+    color:#4e73df!important;
+}
