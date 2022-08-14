@@ -16,7 +16,7 @@
                     <option value="" selected disabled>{{__('property.choose_governorate')}}</option>
                     @if(isset($govs) && count($govs) > 0)
                         @foreach($govs as $gov)
-                            <option value="{{$gov->id}}">{{$gov->governorate_name}}</option>
+                            <option  value="{{$gov->id}}">{{$gov->governorate_name}}</option>
                         @endforeach
                     @endif
                 </select>

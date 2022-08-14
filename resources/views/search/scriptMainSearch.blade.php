@@ -160,8 +160,9 @@
             },
             success: function(data) {
                 let all_opt = "";
+
                 $.each(data,function (key,value) {
-                    all_opt += " <option value=" + value.id+ ">" + value.city_name + "</option> ";
+                    all_opt += " <option  value=" + value.id+ ">" + value.city_name + "</option> ";
                 });
                 $("#city > optgroup").html(all_opt);
             },

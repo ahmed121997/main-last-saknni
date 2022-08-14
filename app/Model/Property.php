@@ -58,4 +58,10 @@ class Property extends Model
     }
 ###########################  End Relation with Property Model ########################
 
+
+public function scopeActive($q, $id){
+
+    return $q->where('id',$id)->update(['status' => 1]);
+}
+
 }

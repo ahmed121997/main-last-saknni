@@ -1,5 +1,6 @@
 <?php
 
+use App\Model\Property;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
@@ -31,9 +32,9 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
 
     // Route::get('/test', function(){
 
-    //  $files = Storage::disk('public');
-    //  return  storage_path();
-    //  return dd($files);
+    //      $res = Property::find(11)->active(11);
+
+
     // });
 
 });
