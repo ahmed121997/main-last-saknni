@@ -29,11 +29,11 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
 
     Route::post('/verify','AdminController@verify_user')->name('admin.verify.user');
 
-    Route::get('/test', function(){
+    // Route::get('/test', function(){
 
-     $files = Storage::disk('public');
-     return  storage_path();
-     return dd($files);
-    });
+    //  $files = Storage::disk('public');
+    //  return  storage_path();
+    //  return dd($files);
+    // });
 
 });
