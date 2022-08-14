@@ -204,7 +204,7 @@ class SearchController extends Controller
                 ->where($col_3,$value_3)
                 ->where($col_4,$value_4)
                 ->where($col_5,$value_5)
-                ->paginate(PAGINATION_COUNT);
+                ->paginate(ENV('PAGINATION_COUNT','20'));
 
             foreach ($properties as $property){
                 $property->images->source = unserialize($property->images->source);

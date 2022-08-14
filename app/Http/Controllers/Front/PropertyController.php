@@ -195,7 +195,7 @@ class PropertyController extends Controller
             'city'=> function($q){
             $q->select('id','city_name_'.app()->getLocale().' as city_name');
         }
-        ])->paginate(PAGINATION_COUNT);
+        ])->paginate(env('PAGINATION_COUNT','20'));
 
         foreach ($properties as $property){
             $property->images->source = unserialize($property->images->source);

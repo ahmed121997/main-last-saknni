@@ -28,10 +28,10 @@
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    
+
 
      <!-- Users item  -->
-    
+
     <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('admin.user')}}">
             <i class="fas fa-user fa-2x text-gray"></i>
@@ -43,12 +43,19 @@
             <span>Properties</span>
         </a>
 
-         <!-- logout item  -->
-        <a class="nav-link collapsed" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+
+
+        <a class="nav-link collapsed" href="{{route('admin.logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
             <i class="fas fa-sign-out-alt fa-2x text-gray" ></i>
             <span>Logout</span>
         </a>
-        
+
+        <form id="logout-form" method="POST" action="{{ route('admin.logout') }}"  style="display: none;">
+            @csrf
+        </form>
+         <!-- logout item  -->
+
+
     </li>
 
 

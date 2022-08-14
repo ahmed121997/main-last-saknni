@@ -1,5 +1,5 @@
 <?php
-const PAGINATION_COUNT = 20;
+
 
 use App\Model\Property;
 use Illuminate\Support\Facades\Route;

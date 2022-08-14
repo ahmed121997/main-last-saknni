@@ -12,6 +12,7 @@ use Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth as FacadesAuth;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -29,6 +30,7 @@ class AdminController extends Controller
         $user_active = User::where('last_seen','<', now()->addMinutes(2))->where('last_seen','>', now()->subMinute(2))->get()->count();
         $property_count = Property::count();
         $not_active = Property::where('status',0)->get()->count();
+        $count_iamges = count(Storage::disk('public')->files('images'));
         // Data Chart
         $max_month = 6;
         $start = Carbon::now()->startOfMonth()->subMonth($max_month - 1);
@@ -36,6 +38,7 @@ class AdminController extends Controller
         $months = [];
         $users = [];
         $properties = [];
+
         for($i=0;$i<6;$i++){
             $m = $start->format('F');
             $user = User::whereBetween('created_at', [$start, $end])->get();
@@ -46,7 +49,7 @@ class AdminController extends Controller
             $start->addMonthsNoOverflow(1);
             $end->addMonthsNoOverflow(1);
         }
-        return view('admin.dashboard',compact(['user_count','property_count','not_active','months','users','properties','user_active']));
+        return view('admin.dashboard',compact(['user_count','property_count','not_active','months','users','properties','user_active','count_iamges']));
     }
 
 
@@ -54,16 +57,16 @@ class AdminController extends Controller
      * user profile
      */
     public function user(){
-        $users = User::select()->paginate(PAGING_COUNT);
+        $users = User::select()->paginate(ENV('PAGINATION_COUNT','20'));
         foreach ($users as $user){
             $user->status = $user->email_verified_at !=  '' ? 'Verified' : 'Not verified';
-            if($user->last_seen < now()->addMinutes(2) and $user->last_seen >  now()->subMinute(2)) 
+            if($user->last_seen < now()->addMinutes(2) and $user->last_seen >  now()->subMinute(2))
                 $user->last_seen = 'online';
         }
         return view('admin.user',compact(['users']));
     }
     public function property(){
-        $properties = Property::with(['des','typeProperty','view','finish','payment'])->paginate(PAGING_COUNT);
+        $properties = Property::with(['des','typeProperty','view','finish','payment'])->paginate(ENV('PAGINATION_COUNT','20'));
         $not_active = 0;
         foreach ($properties as $property){
             $not_active = $property->status == 0 ? ++$not_active: $not_active;
@@ -93,7 +96,7 @@ class AdminController extends Controller
 
     public function logout(Request $request)
     {
-        
+
         Auth::logout();
         return redirect('/');
     }
@@ -103,7 +106,7 @@ class AdminController extends Controller
 
     /**
      * profile admin
-     * 
+     *
      */
 
      public function profile(){

@@ -4,7 +4,8 @@
 
     $users_count = isset($user_count)? $user_count:'undefined';
     $properties_count = isset($property_count)? $property_count:'undefined';
-    $percentage_not_active = isset($not_active)? ($not_active/$properties_count) *100:0;
+    $percentage_not_active = isset($not_active)? ($not_active/$properties_count) *100 : 0;
+    $percentage_not_active = round($percentage_not_active,2);
     $percentage_active = 100 - $percentage_not_active;
 @endphp
 @extends('admin.layouts.app')
@@ -106,7 +107,7 @@
                     </div>
                 </div>
             </div>
- 
+
              <!-- users  active now -->
              <div class="col-xl-3 col-md-6 mb-4">
                 <div class="card border-left-primary shadow h-100 py-2">
@@ -123,7 +124,26 @@
                     </div>
                 </div>
             </div>
-            
+
+
+
+             <!-- files  -->
+             <div class="col-xl-3 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="font-weight-bold text-primary text-uppercase mb-1">Files</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">{{$count_iamges}}</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-file fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
         <!-- Content Row -->

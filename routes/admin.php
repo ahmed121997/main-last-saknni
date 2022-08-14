@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Model;
-const PAGING_COUNT = 50;
+use Illuminate\Support\Facades\Storage;
+
 /**
 |--------------------------------------------------------------------------
 | Admin Routes
@@ -28,9 +29,11 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
 
     Route::post('/verify','AdminController@verify_user')->name('admin.verify.user');
 
+    Route::get('/test', function(){
 
-    
-    Route::get('test', function (){
-        return auth()->user();
+     $files = Storage::disk('public');
+     return  storage_path();
+     return dd($files);
     });
+
 });

@@ -271,7 +271,7 @@ class PropertyController extends Controller
                 'city' => function ($q) {
                     $q->select('id', 'city_name_' . app()->getLocale() . ' as city_name');
                 }
-            ])->paginate(PAGINATION_COUNT);
+            ])->paginate(ENV('PAGINATION_COUNT','20'));
 
             foreach ($properties as $property) {
                 $property->images->source = unserialize($property->images->source);
@@ -305,7 +305,7 @@ class PropertyController extends Controller
                 'city' => function ($q) {
                     $q->select('id', 'city_name_' . app()->getLocale() . ' as city_name');
                 }
-            ])->where('special', '=', 1)->orderByDesc('created_at')->paginate(PAGINATION_COUNT);
+            ])->where('special', '=', 1)->orderByDesc('created_at')->paginate(ENV('PAGINATION_COUNT','20'));
 
             foreach ($properties as $property) {
                 $property->images->source = unserialize($property->images->source);

@@ -66,14 +66,14 @@
                                         <label class="form-label" for="email">{{ __('logins.email') }}</label>
 
                                         @error('email')
-                                        <span class="invalid-feedback" role="alert">
+                                        <span class="invalid-feedback mb-5" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                         @enderror
                                     </div>
 
                                     {{-- password input --}}
-                                    <div class="form-outline mb-4">
+                                    <div class="form-outline mb-4 mt-4">
                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" />
                                         <label class="form-label" for="password">{{ __('logins.password') }}</label>
 

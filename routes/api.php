@@ -27,8 +27,8 @@ Route::group(['namespace'=>'Api','middleware' =>['check.api.pass','change.api.la
         Route::post('forgot_password', 'AuthController@forgot_password');
         Route::post('change_password', 'AuthController@change_password');
         // verify email
-        Route::post('email/verify/{id}', 'AuthController@verify')->name('verification.verify'); // Make sure to keep this as your route name
-        Route::post('email/resend', 'AuthController@resend')->name('verification.resend');
+        Route::post('email/verify/{id}', 'AuthController@verify')->name('verify.verify'); // Make sure to keep this as your route name
+        Route::post('email/resend', 'AuthController@resend')->name('verify.resend');
 
         // users api routes
         Route::group([
