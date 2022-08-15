@@ -19,7 +19,7 @@
             <div class="card">
                 <div class="card-header" id="headingOne">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link background-saknni" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             {{__('users.personal_information')}}
                         </button>
                     </h5>
@@ -36,7 +36,7 @@
                             <button class="btn btn-primary  mr-3 mt-3"><a href="{{route('user.edit')}}">Edit</a></button>
                             <button class="btn btn-primary mr-3 mt-3"><a href="{{route('user.change_password')}}">Change Password</a></button>
                         </div>
-                       
+
                     </div>
                 </div>
             </div>

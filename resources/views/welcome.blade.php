@@ -35,7 +35,7 @@
                                     <p class="card-text col-6"><span>{{__('property.view')}}  : </span>{{$property->view->list}}</p>
                                 </div>
 
-                                <a href="{{route('show.property',$property->id)}}" class="btn btn-primary" target="_blank">{{__('property.show_details')}}</a>
+                                <a href="{{route('show.property',$property->id)}}" class="btn btn-primary background-saknni target="_blank">{{__('property.show_details')}}</a>
 
                                 @include('property.favorite',['id'=>$property->id,'fav'=>$property->favorite])
                             </div>
@@ -44,7 +44,7 @@
                 @endforeach
             </div>
         <div class="d-flex justify-content-center mt-2">
-            <button class="btn btn-secondary"><a href="{{route('all.special.properties')}}" target="_blank">{{__('property.show_more_special_properties')}}</a></button>
+            <button class="btn btn-secondary background-saknni"><a href="{{route('all.special.properties')}}" target="_blank">{{__('property.show_more_special_properties')}}</a></button>
         </div>
         @endif
 
@@ -55,5 +55,5 @@
     @include('search.scriptMainSearch')
 
     @include('layouts.scriptFavorite')
-    
+
 @endsection

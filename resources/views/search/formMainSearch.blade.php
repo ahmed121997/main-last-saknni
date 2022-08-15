@@ -32,7 +32,7 @@
             </div>
 
             <div class="col-lg-1 d-none d-lg-block">
-                <input type="submit" class="btn btn-warning d-block  form-control-lg" value="{{__('property.search')}}"/>
+                <input type="submit" class="btn btn-warning d-block background-saknni border-saknni form-control-lg" value="{{__('property.search')}}"/>
             </div>
 
 
@@ -84,7 +84,7 @@
             </div>
 
             <div class="col-lg-2 d-lg-none d-sm-none d-md-block">
-                <input type="submit" class="btn btn-warning d-block w-100  form-control-lg" value="{{__('property.search')}}"/>
+                <input type="submit" class="btn btn-warning background-saknni d-block w-100  form-control-lg" value="{{__('property.search')}}"/>
             </div>
         </div>
     </div>

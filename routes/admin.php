@@ -28,7 +28,8 @@ Route::group(['namespace'=>'Admin','prefix'=>'admin'],function(){
     Route::post('/profile/update/{id}','AdminController@profile_update')->name('admin.profile.update');
 
 
-    Route::post('/verify','AdminController@verify_user')->name('admin.verify.user');
+    Route::post('/verify_user','AdminController@verify_user')->name('admin.verify.user');
+    Route::post('/verify_property','AdminController@verify_property')->name('admin.verify.property');
 
     // Route::get('/test', function(){
 

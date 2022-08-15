@@ -36,7 +36,7 @@
                                     <p class="card-text col-6"><span>{{__('property.price')}}  : </span>{{$property->price}} {{__('property.eg')}}@if($property->list_section == 'rent') / {{$property->type_rent}} @endif</p>
                                     <p class="card-text col-6"><span>{{__('property.view')}}  : </span>{{$property->view->list}}</p>
                                 </div>
-                                <a href="{{route('show.property',$property->id)}}" class="btn btn-primary" target="_blank">{{__('property.show_details')}}</a>
+                                <a href="{{route('show.property',$property->id)}}" class="btn btn-primary background-saknni" target="_blank">{{__('property.show_details')}}</a>
                                 @include('property.favorite',['id'=>$property->id,'fav'=>$property->favorite])
                             </div>
                         </div>

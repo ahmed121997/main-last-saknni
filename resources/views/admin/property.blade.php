@@ -52,7 +52,14 @@
                                     <td>{{$property->area}}</td>
                                     <td>{{$property->price}}</td>
                                     <td>{{$property->num_rooms}}</td>
-                                    <td>{{$property->status}}</td>
+
+                                    <td>
+                                        @if($property->status === 'active')<span class="text-success">{{$property->status}}</span>
+                                        @else
+                                        <span class="text-danger">{{$property->status}}</span>
+                                        <button class="btn btn-danger btn-sm verify" id="{{$property->id}}">Verify</button>
+                                        @endif
+                                    </td>
                                 </tr>
                             @endforeach
                         @endif
@@ -74,4 +81,26 @@
 
     <!-- Page level custom scripts -->
     <script src="{{asset('public/js/admin/demo/datatables-demo.js')}}"></script>
+
+    <script>
+        $(".verify").click(function(){
+            let id = this.id;
+            console.log(id);
+            $.ajax({
+                type: 'post',
+                url: '{{route("admin.verify.property")}}',
+                data: {
+                    '_token' : '{{csrf_token()}}',
+                    'id' : id,
+                },
+                success: function(data) {
+                    $('#'+id).parent().html('<span class="btn text-success">Verified</span>');
+                },
+                error: function(reject) {
+
+                },
+            });
+        });
+
+    </script>
 @endsection

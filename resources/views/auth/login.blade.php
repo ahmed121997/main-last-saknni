@@ -1,11 +1,12 @@
 
 @extends('layouts.app')
+@section('pre-links')
 
-@section('links')
-
-    <link
+<link
     href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
     rel="stylesheet"/>
+@endsection
+@section('links')
 
 <style>
 

@@ -18,6 +18,10 @@ $margin = $locale === 'en' ? true : false;
     <title>{{ config('app.name', 'Saknni') }}</title>
 
     <link rel="icon" href="{{asset('public/logo.jpg')}}"/>
+
+    {{-- pre links --}}
+    @yield('pre-links')
+
     <!-- Scripts -->
     <script src="{{ asset('public/js/app.js') }}" defer></script>
     <script src="{{ asset('public/js/all.js') }}" defer></script>

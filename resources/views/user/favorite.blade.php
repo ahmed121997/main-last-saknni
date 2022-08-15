@@ -29,7 +29,7 @@
                                 <p class="card-text col-6"><span>{{__('property.view')}}  : </span> @if(app()->getLocale() == 'en') {{$property->view->list_en}} @else {{$property->view->list_ar}} @endif</p>
                             </div>
 
-                            <a href="{{route('show.property',$property->id)}}" class="btn btn-primary" target="_blank">{{__('property.show_details')}}</a>
+                            <a href="{{route('show.property',$property->id)}}" class="btn btn-primary background-saknni" target="_blank">{{__('property.show_details')}}</a>
 
                             @include('property.favorite',['id'=>$property->id,'fav'=>$property->favorite])
                         </div>

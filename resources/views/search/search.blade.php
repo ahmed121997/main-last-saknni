@@ -59,7 +59,7 @@
                         @endif
                     </select>
                     <hr/>
-                    <div class="text-center"><button id="search" class="btn btn-secondary mb-2">{{__('property.search')}}</button></div>
+                    <div class="text-center"><button id="search" class="btn btn-secondary mb-2 background-saknni">{{__('property.search')}}</button></div>
                 </form>
             </div>
             <div class="col-sm-6 col-md-8 col-lg-9 col-xl-10 results">

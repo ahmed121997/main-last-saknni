@@ -6,10 +6,10 @@
                 @foreach ($errors->all() as $error)
                     <div class="message text-danger"><i class="fa fa-check-circle" aria-hidden="true"></i> {{$error}}</div>
                 @endforeach
-            
+
             @endif
 
-        
+
 
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -63,7 +63,7 @@
                             </div>
                             <div class="form-group row mb-0">
                                 <div class="col-md-6 offset-md-4 text-right">
-                                    <button type="submit" class="btn btn-primary  ">
+                                    <button type="submit" class="btn btn-primary  background-saknni">
                                         {{ __('users.update') }}
                                     </button>
                                 </div>

@@ -31,10 +31,11 @@
 .search #search {
     color: #086c81;
     background-color: #ffffff;
-    border-color: #1d68a7;
+    border:2px solid #FFF;
+    transition: all .2s ease;
 }
 .search #search:hover{
-    border-color: #1d68a7;
+    border:1px solid #FFF;
     color:#FFF;
 }
 .card-body p{
