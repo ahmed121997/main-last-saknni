@@ -10,7 +10,7 @@
         <img src="{{asset('public/images/activation/mastercard.png')}}" alt="Mastercard" />
         <img src="{{asset('public/images/activation/american-express.png')}}" alt="American-express" />
     </div>
-    <button class="btn btn-primary d-block ">
+    <button class="btn btn-primary d-block background-saknni">
         <a href="#" class="d-flex justify-content-center" id="activation-btn" style="color:#FFF;text-decoration: none;">
             <div>Activation now</div>
             <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
