@@ -65,6 +65,8 @@ class AdminController extends Controller
         }
         return view('admin.user',compact(['users']));
     }
+
+
     public function property(){
         $properties = Property::with(['des','typeProperty','view','finish','payment'])->paginate(ENV('PAGINATION_COUNT','20'));
         $not_active = 0;
