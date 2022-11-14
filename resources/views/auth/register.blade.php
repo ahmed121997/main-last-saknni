@@ -41,10 +41,10 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="mobile" class="offset-lg-1 col-lg-3 col-form-label">{{ __('registers.phone') }}</label>
+                            <label for="phone" class="offset-lg-1 col-lg-3 col-form-label">{{ __('registers.phone') }}</label>
 
                             <div class="col-lg-7">
-                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"  required autocomplete="phone">
+                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone"  required autocomplete="phone" value="{{ old('phone') }}">
 
                                 @error('phone')
                                 <span class="invalid-feedback" role="alert">
